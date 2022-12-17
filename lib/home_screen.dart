@@ -31,6 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade300,
       body: SafeArea(
         child: Column(
           children: [
@@ -44,13 +45,54 @@ class _HomeScreenState extends State<HomeScreen> {
                     return ListView.builder(
                         itemCount: postList.length,
                         itemBuilder: (context, index) {
-                          return Card(
-                            margin: EdgeInsets.all(10),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(postList[index].title.toString()),
-                              ],
+                          return Container(
+                            margin: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.grey.shade50,
+                            ),
+                            child: Card(
+                              elevation: 0,
+                              color: Colors.grey.shade50,
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Text(
+                                          postList[index].id.toString(),
+                                          style: const TextStyle(
+                                              fontSize: 22,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                        const Text(
+                                          ". Title:",
+                                          style: TextStyle(
+                                              fontSize: 22,
+                                              fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(postList[index].title.toString()),
+                                    const SizedBox(
+                                      height: 10,
+                                    ),
+                                    const Text(
+                                      "Description:",
+                                      style: TextStyle(
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                    Text(
+                                      postList[index].body.toString(),
+                                      style: TextStyle(
+                                          color: Colors.grey.shade800),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           );
                         });
