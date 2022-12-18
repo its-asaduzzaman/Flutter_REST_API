@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rest_api_flutter/home_screen.dart';
 import 'package:rest_api_flutter/second_screen.dart';
+import 'package:rest_api_flutter/third_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const SecondScreen(),
+      home: const ThirdScreen(),
     );
   }
 }
