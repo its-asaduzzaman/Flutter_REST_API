@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rest_api_flutter/screens/example_four.dart';
 import 'package:rest_api_flutter/screens/example_three.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ExampleThree(),
+      home: const ExampleFour(),
     );
   }
 }
