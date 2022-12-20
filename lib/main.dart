@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rest_api_flutter/screens/example_four.dart';
 import 'package:rest_api_flutter/screens/example_three.dart';
+import 'package:rest_api_flutter/screens/last_get_api_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ExampleFour(),
+      home: const LastApiGetExample(),
     );
   }
 }
