@@ -40,7 +40,31 @@ class _LastApiGetExampleState extends State<LastApiGetExample> {
                       itemBuilder: (context, index) {
                         return Column(
                           children: [
-                            Text("samrat"),
+                            Container(
+                              height: MediaQuery.of(context).size.height * .3,
+                              width: MediaQuery.of(context).size.height * .1,
+                              child: ListView.builder(
+                                  itemCount: snapshot.data!.data![index]
+                                      .products![index].images!.length,
+                                  itemBuilder: (context, position) {
+                                    print(snapshot.data!.data![index].image
+                                        .toString());
+                                    return Container(
+                                      height:
+                                          MediaQuery.of(context).size.height *
+                                              .25,
+                                      width:
+                                          MediaQuery.of(context).size.height *
+                                              .05,
+                                      decoration: BoxDecoration(
+                                          image: DecorationImage(
+                                        image: NetworkImage(snapshot
+                                            .data!.data![index].image
+                                            .toString()),
+                                      )),
+                                    );
+                                  }),
+                            ),
                           ],
                         );
                       });
