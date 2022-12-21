@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rest_api_flutter/screens/example_four.dart';
 import 'package:rest_api_flutter/screens/example_three.dart';
 import 'package:rest_api_flutter/screens/last_get_api_example.dart';
+import 'package:rest_api_flutter/screens/third_screen.dart';
 
 void main() {
   runApp(const MyApp());
