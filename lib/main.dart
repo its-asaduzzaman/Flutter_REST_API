@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rest_api_flutter/screens/example_four.dart';
 import 'package:rest_api_flutter/screens/example_three.dart';
 import 'package:rest_api_flutter/screens/last_get_api_example.dart';
+import 'package:rest_api_flutter/screens/signup_screen.dart';
 import 'package:rest_api_flutter/screens/third_screen.dart';
 
 void main() {
@@ -15,11 +16,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const LastApiGetExample(),
+      home: const SignUpScreen(),
     );
   }
 }
