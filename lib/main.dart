@@ -4,6 +4,7 @@ import 'package:rest_api_flutter/screens/example_three.dart';
 import 'package:rest_api_flutter/screens/last_get_api_example.dart';
 import 'package:rest_api_flutter/screens/signup_screen.dart';
 import 'package:rest_api_flutter/screens/third_screen.dart';
+import 'package:rest_api_flutter/screens/upload_image_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SignUpScreen(),
+      home: const ImageUploadScreen(),
     );
   }
 }
